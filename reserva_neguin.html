@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anúncio Blue Lake - EngeTec ZAPI</title>
+    <style>
+        /* Variáveis de Cores do Site */
+        :root {
+            --primary-color: #001F3F; /* Azul Marinho Profundo (Autoridade e Oceano) */
+            --secondary-color: #CC9900; /* Dourado Suave (Luxo) */
+            --saving-color: #900C3F; /* Cor para destaque de economia (Vermelho vinho) */
+            --bg-ad: #E0E8F0; /* Fundo mais claro para contraste */
+            --text-light: #FFFFFF;
+        }
+
+        /* Container Principal: Simula o formato vertical de Story/Post */
+        body {
+            font-family: 'Montserrat', 'Roboto', 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-ad);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .ad-container {
+            width: 100%;
+            max-width: 500px; /* Largura típica para um post */
+            aspect-ratio: 9/16; /* Formato Story/Reel */
+            background: linear-gradient(180deg, rgba(0, 31, 63, 0.8) 0%, rgba(144, 12, 63, 0.7) 100%), url('fundo-texturizado-obra-ou-praia.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--text-light);
+            padding: 40px 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            border-radius: 10px; /* Bordas arredondadas para o preview */
+            overflow: hidden;
+        }
+
+        /* Topo e Título */
+        .header-ad {
+            margin-bottom: 30px;
+        }
+        .header-ad h1 {
+            font-size: 2.2em;
+            font-weight: 900;
+            line-height: 1.2;
+            text-transform: uppercase;
+            color: var(--text-light);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        .header-ad .subtitle {
+            font-size: 1.1em;
+            color: var(--secondary-color);
+            font-weight: 700;
+            margin-top: 5px;
+        }
+
+        /* Seção de Destaques (Números) */
+        .highlights-box {
+            background-color: rgba(204, 153, 0, 0.1); /* Dourado transparente */
+            border: 1px solid var(--secondary-color);
+            padding: 20px 10px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .highlights-grid {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 15px;
+        }
+        .highlight-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 5px;
+        }
+        .highlight-item .number {
+            font-size: 2.5em;
+            font-weight: 900;
+            color: var(--secondary-color);
+            line-height: 1;
+        }
+        .highlight-item .label {
+            font-size: 0.75em;
+            font-weight: 500;
+            color: var(--text-light);
+            margin-top: 5px;
+        }
+        .highlight-item .small-label {
+            font-size: 0.65em;
+            font-weight: 400;
+            color: #ddd;
+        }
+
+        /* Chamada para Ação (CTA) */
+        .cta-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            padding-top: 20px;
+        }
+        .cta-button {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: 900;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            transition: background-color 0.3s;
+            width: 90%;
+            max-width: 300px;
+        }
+        .cta-button:hover {
+            background-color: #b38600;
+        }
+
+        .cta-link {
+            font-size: 0.9em;
+            color: var(--text-light);
+            text-decoration: none;
+            border-bottom: 2px solid var(--saving-color);
+            padding-bottom: 2px;
+            font-weight: 600;
+        }
+
+        /* Rodapé/Instrução */
+        .footer-ad {
+            margin-top: 40px;
+        }
+        .footer-ad p {
+            font-size: 0.8em;
+            color: rgba(255, 255, 255, 0.7);
+            font-style: italic;
+        }
+        
+        /* Media Query para garantir que se ajusta bem em telas menores (prevenção) */
+        @media (max-width: 400px) {
+            .header-ad h1 { font-size: 1.8em; }
+            .highlight-item .number { font-size: 2em; }
+            .highlight-item .label { font-size: 0.7em; }
+            .cta-button { font-size: 1em; padding: 12px 25px; }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="ad-container">
+    
+    <div class="header-ad">
+        <p class="subtitle">SEU PRÓXIMO INVESTIMENTO DE LUXO EM CONSTRUÇÃO</p>
+        <h1>
+            OPORTUNIDADE BLUE LAKE:<br>
+            LUXO SEM SAIR DO ORÇAMENTO
+        </h1>
+    </div>
+
+    <div class="highlights-box">
+        <p style="font-size: 1em; font-weight: 600; margin-bottom: 15px; color: var(--text-light);">
+            GARANTIAS E VANTAGENS DO SISTEMA MONOLÍTICO
+        </p>
+        <div class="highlights-grid">
+            
+            <div class="highlight-item">
+                <div class="number">12</div>
+                <div class="label">MESES</div>
+                <div class="small-label">Prazo de Entrega Total</div>
+            </div>
+
+            <div class="highlight-item">
+                <div class="number">20</div>
+                <div class="label">PARCELAS</div>
+                <div class="small-label">Sem Juros e Sem Entrada</div>
+            </div>
+
+            <div class="highlight-item">
+                <div class="number">R$ 60K</div>
+                <div class="label" style="color: var(--saving-color);">ECONOMIA</div>
+                <div class="small-label">Comparado ao Convencional (Planta 02)</div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="cta-section">
+        <a href="[LINK DO WHATSAPP AQUI]" class="cta-button">
+            <i class="fas fa-hand-point-up"></i>
+            QUERO VER AS PLANTAS E CONDIÇÕES
+        </a>
+        
+        <a href="#link-para-a-pagina-do-site" class="cta-link">
+            Visite nosso site para mais detalhes
+        </a>
+    </div>
+    
+    <div class="footer-ad">
+        <p>Desenvolvido por EngeTec & ZAPI Soluções. Oferta válida por tempo limitado.</p>
+        <p>Deslize para cima para ver o formulário de contato (simulação de Story/Reel)</p>
+    </div>
+
+</div>
+
+</body>
+</html>
