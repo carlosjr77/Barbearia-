@@ -3,218 +3,328 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anúncio Blue Lake - EngeTec ZAPI</title>
+    <title>Reserva com Neguin | Barbearia Premium</title>
     <style>
-        /* Variáveis de Cores do Site */
-        :root {
-            --primary-color: #001F3F; /* Azul Marinho Profundo (Autoridade e Oceano) */
-            --secondary-color: #CC9900; /* Dourado Suave (Luxo) */
-            --saving-color: #900C3F; /* Cor para destaque de economia (Vermelho vinho) */
-            --bg-ad: #E0E8F0; /* Fundo mais claro para contraste */
-            --text-light: #FFFFFF;
-        }
-
-        /* Container Principal: Simula o formato vertical de Story/Post */
+        /* ESTILOS BASE E CONTAINER - Mantidos */
         body {
-            font-family: 'Montserrat', 'Roboto', 'Arial', sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--bg-ad);
+            background-color: #121212;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
         }
-        .ad-container {
-            width: 100%;
-            max-width: 500px; /* Largura típica para um post */
-            aspect-ratio: 9/16; /* Formato Story/Reel */
-            background: linear-gradient(180deg, rgba(0, 31, 63, 0.8) 0%, rgba(144, 12, 63, 0.7) 100%), url('fundo-texturizado-obra-ou-praia.jpg');
-            background-size: cover;
-            background-position: center;
-            color: var(--text-light);
-            padding: 40px 20px;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+        .container {
+            max-width: 420px;
+            width: 90%;
+            background-color: #1e1e1e;
+            color: #f0f0f0;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
             text-align: center;
-            border-radius: 10px; /* Bordas arredondadas para o preview */
-            overflow: hidden;
+            border-top: 5px solid #d4a75e;
         }
-
-        /* Topo e Título */
-        .header-ad {
-            margin-bottom: 30px;
+        h2 {
+            color: #d4a75e;
+            margin-bottom: 2px;
+            font-size: 1.5em;
+            letter-spacing: 1px;
         }
-        .header-ad h1 {
-            font-size: 2.2em;
-            font-weight: 900;
-            line-height: 1.2;
-            text-transform: uppercase;
-            color: var(--text-light);
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-        }
-        .header-ad .subtitle {
-            font-size: 1.1em;
-            color: var(--secondary-color);
-            font-weight: 700;
+        h3 {
+            color: #ffffff;
             margin-top: 5px;
+            font-size: 1.2em;
         }
-
-        /* Seção de Destaques (Números) */
-        .highlights-box {
-            background-color: rgba(204, 153, 0, 0.1); /* Dourado transparente */
-            border: 1px solid var(--secondary-color);
-            padding: 20px 10px;
-            border-radius: 8px;
-            margin: 20px 0;
+        p {
+            color: #b0b0b0;
+            font-size: 0.9em;
         }
-        .highlights-grid {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            gap: 15px;
+        input[type="text"], input[type="tel"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #333333;
+            color: #ffffff;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
         }
-        .highlight-item {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 0 5px;
+        input[type="text"]:focus, input[type="tel"]:focus {
+            outline: none;
+            border-bottom: 2px solid #d4a75e;
         }
-        .highlight-item .number {
-            font-size: 2.5em;
-            font-weight: 900;
-            color: var(--secondary-color);
-            line-height: 1;
-        }
-        .highlight-item .label {
-            font-size: 0.75em;
+        label {
+            display: block;
+            text-align: left;
+            margin-top: 15px;
+            color: #d4a75e;
             font-weight: 500;
-            color: var(--text-light);
-            margin-top: 5px;
         }
-        .highlight-item .small-label {
-            font-size: 0.65em;
-            font-weight: 400;
-            color: #ddd;
+        button {
+            background-color: #d4a75e; 
+            color: #1c1c1c;
+            padding: 14px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 25px;
+            transition: background-color 0.3s;
+            width: 100%;
         }
-
-        /* Chamada para Ação (CTA) */
-        .cta-section {
+        button:hover {
+            background-color: #bfa05d;
+        }
+        #confirmacao-pix {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #2a2a2a;
+            border-radius: 8px;
+            text-align: left;
+            border: 1px dashed #444;
+        }
+        .pix-container {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .pix-container img {
+            width: 150px;
+            height: 150px;
+            border: 4px solid #fff;
+            border-radius: 4px;
+        }
+        .copia-cola-btn {
+            background-color: #0080ff;
+            color: white;
+            padding: 10px 15px;
+            margin-top: 10px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        .copia-cola-btn:hover {
+            background-color: #0066cc;
+        }
+        .aviso-legal {
+            font-size: 0.7em;
+            color: #777;
+            margin-top: 15px;
+            line-height: 1.5;
+            text-align: center;
+        }
+        .whatsapp-button {
+            background-color: #25D366; 
+            color: white;
+            margin-top: 15px;
+            width: 100%;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            padding-top: 20px;
-        }
-        .cta-button {
-            background-color: var(--secondary-color);
-            color: var(--primary-color);
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-size: 1.1em;
-            font-weight: 900;
-            text-decoration: none;
-            display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-            transition: background-color 0.3s;
-            width: 90%;
-            max-width: 300px;
+            font-size: 17px;
         }
-        .cta-button:hover {
-            background-color: #b38600;
+        .whatsapp-icon {
+            margin-right: 8px;
+            font-size: 20px;
         }
-
-        .cta-link {
-            font-size: 0.9em;
-            color: var(--text-light);
+        .logo img {
+            max-width: 180px;
+            height: auto;
+            border-radius: 50%;
+            border: 3px solid #d4a75e;
+            margin-bottom: 15px;
+        }
+        .indicacao-box {
+            background-color: #2a2a2a;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 25px;
+            border-left: 5px solid #d4a75e;
+            text-align: left;
+        }
+        .whatsapp-link {
+            display: inline-flex;
+            align-items: center;
+            color: #25D366;
             text-decoration: none;
-            border-bottom: 2px solid var(--saving-color);
-            padding-bottom: 2px;
-            font-weight: 600;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        .whatsapp-link .whatsapp-icon {
+            margin-right: 5px;
+            color: #25D366;
         }
 
-        /* Rodapé/Instrução */
-        .footer-ad {
-            margin-top: 40px;
+        /* ESTILOS FLUTUANTES */
+        #floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
         }
-        .footer-ad p {
-            font-size: 0.8em;
-            color: rgba(255, 255, 255, 0.7);
-            font-style: italic;
+        #floating-whatsapp img, #floating-assistant img {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
         }
-        
-        /* Media Query para garantir que se ajusta bem em telas menores (prevenção) */
-        @media (max-width: 400px) {
-            .header-ad h1 { font-size: 1.8em; }
-            .highlight-item .number { font-size: 2em; }
-            .highlight-item .label { font-size: 0.7em; }
-            .cta-button { font-size: 1em; padding: 12px 25px; }
+        #floating-assistant {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            cursor: pointer;
         }
-
+        #assistant-popup {
+            position: fixed;
+            bottom: 80px;
+            left: 20px;
+            background-color: #d4a75e;
+            color: #1c1c1c;
+            padding: 10px;
+            border-radius: 8px;
+            max-width: 200px;
+            font-size: 0.9em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            display: none;
+        }
     </style>
 </head>
 <body>
 
-<div class="ad-container">
+<div class="container">
     
-    <div class="header-ad">
-        <p class="subtitle">SEU PRÓXIMO INVESTIMENTO DE LUXO EM CONSTRUÇÃO</p>
-        <h1>
-            OPORTUNIDADE BLUE LAKE:<br>
-            LUXO SEM SAIR DO ORÇAMENTO
-        </h1>
+    <div class="logo">
+        <img src="logo-corte.png" alt="Logo Neguin du Corte Barbearia">
     </div>
 
-    <div class="highlights-box">
-        <p style="font-size: 1em; font-weight: 600; margin-bottom: 15px; color: var(--text-light);">
-            GARANTIAS E VANTAGENS DO SISTEMA MONOLÍTICO
+    <h2>RESERVA EXCLUSIVA COM NEGUIN</h2>
+    <h3>Barbeiro Neguin</h3>
+    <p>Preencha o formulário para prosseguir com a reserva de horário com o Neguin.</p>
+
+    <form id="form-reserva">
+        <label for="nome">Seu Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        
+        <label for="telefone">Seu WhatsApp (para contato):</label>
+        <input type="tel" id="telefone" name="telefone" required pattern="[0-9]{10,11}" placeholder="Ex: 21987654321">
+        
+        <button type="submit">PROSSEGUIR E GARANTIR HORÁRIO</button>
+    </form>
+
+    <div id="confirmacao-pix" style="display:none;">
+        <h3>PASSO FINAL: Confirme seu VIP Access</h3>
+        
+        <p>1. Pague a **reserva de R$ 15,00** usando o QR Code ou o Pix Copia e Cola abaixo:</p>
+        <p style="font-size: 0.85em; color: #d4a75e;">
+            *R$ 5,00 é taxa de reserva e R$ 10,00 será descontado no pagamento final do seu corte.*
         </p>
-        <div class="highlights-grid">
-            
-            <div class="highlight-item">
-                <div class="number">12</div>
-                <div class="label">MESES</div>
-                <div class="small-label">Prazo de Entrega Total</div>
-            </div>
-
-            <div class="highlight-item">
-                <div class="number">20</div>
-                <div class="label">PARCELAS</div>
-                <div class="small-label">Sem Juros e Sem Entrada</div>
-            </div>
-
-            <div class="highlight-item">
-                <div class="number">R$ 60K</div>
-                <div class="label" style="color: var(--saving-color);">ECONOMIA</div>
-                <div class="small-label">Comparado ao Convencional (Planta 02)</div>
-            </div>
-            
+        
+        <div class="pix-container">
+            <img src="qrcode-pix-reserva.png" alt="QR Code Pix Reserva R$ 15,00">
+            <p style="font-size: 0.9em; color: #b0b0b0; margin-top: 5px;">Valor Fixo: **R$ 15,00**</p>
         </div>
-    </div>
+        
+        <button id="copiar-pix-btn" class="copia-cola-btn">PIX COPIA E COLA</button>
+        
+        <p style="margin-top: 20px; color: #fff;">2. **Notificação Imediata:** Clique no botão abaixo para nos enviar o comprovante.</p>
 
-    <div class="cta-section">
-        <a href="[LINK DO WHATSAPP AQUI]" class="cta-button">
-            <i class="fas fa-hand-point-up"></i>
-            QUERO VER AS PLANTAS E CONDIÇÕES
+        <a id="link-whatsapp" href="#" target="_blank">
+            <button class="whatsapp-button">
+                <span class="whatsapp-icon">📱</span> ENVIAR COMPROVANTE VIA WHATSAPP (NEGUIN)
+            </button>
         </a>
         
-        <a href="#link-para-a-pagina-do-site" class="cta-link">
-            Visite nosso site para mais detalhes
-        </a>
+        <p class="aviso-legal">
+            **Aviso de Cancelamento:** O valor de reserva garante a exclusividade do seu horário. Em caso de não comparecimento ou cancelamento com menos de 3 horas, o valor depositado não será reembolsado.
+        </p>
+        
+        <textarea id="pix-code-payload" style="display:none;">
+00020126580014BR.GOV.BCB.PIX01368b362a40-2c30-4453-921c-d318db201168520400005303986540515.005802BR5924Carlos Henrique da Costa6009SAO PAULO621405107aZzlKfrWL63041C92
+        </textarea>
     </div>
     
-    <div class="footer-ad">
-        <p>Desenvolvido por EngeTec & ZAPI Soluções. Oferta válida por tempo limitado.</p>
-        <p>Deslize para cima para ver o formulário de contato (simulação de Story/Reel)</p>
+    <div class="indicacao-box">
+        <h4>🚖 Motorista Particular: Niran</h4>
+        <p>Chegue com pontualidade e segurança. Recomendamos um motorista de confiança na região, dedicado aos nossos clientes:</p>
+        <a href="https://wa.me/5521994475860" target="_blank" class="whatsapp-link">
+            <span class="whatsapp-icon">📞</span> +55 21 99447-5860
+        </a>
+    </div>
+
+    <div class="indicacao-box">
+        <h4>🍻 Delivery de Bebidas: KOJAK</h4>
+        <p>Para sua conveniência: nosso depósito parceiro oferece delivery rápido e seguro na região. Confiança garantida.</p>
+        <a href="https://wa.me/5521979934676" target="_blank" class="whatsapp-link">
+            <span class="whatsapp-icon">📞</span> +55 21 97993-4676
+        </a>
     </div>
 
 </div>
+
+<div id="assistant-popup">
+    Olá! Se tiver dúvidas sobre a reserva com Neguin, clique no ícone do WhatsApp ao lado!
+</div>
+
+<div id="floating-assistant" onclick="toggleAssistantPopup()">
+    <img src="logo-corte.png" alt="Assistente IA">
+</div>
+
+<a id="floating-whatsapp" href="https://wa.me/5521966138194?text=Olá, Neguin! Tenho dúvidas sobre o agendamento no site." target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Dúvidas">
+</a>
+
+
+<script>
+    function toggleAssistantPopup() {
+        const popup = document.getElementById('assistant-popup');
+        if (popup.style.display === 'block') {
+            popup.style.display = 'none';
+        } else {
+            popup.style.display = 'block';
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 5000); 
+        }
+    }
+
+    document.getElementById('copiar-pix-btn').addEventListener('click', function() {
+        const pixCode = document.getElementById('pix-code-payload');
+        pixCode.select();
+        document.execCommand('copy');
+        this.textContent = 'CÓDIGO COPIADO! ✅';
+        this.style.backgroundColor = '#25D366';
+        setTimeout(() => {
+            this.textContent = 'PIX COPIA E COLA';
+            this.style.backgroundColor = '#0080ff';
+        }, 3000);
+    });
+
+    // NEGUIN: 5521966138194
+    document.getElementById('form-reserva').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const nome = document.getElementById('nome').value;
+        const telefone = document.getElementById('telefone').value;
+        const whatsappBarbeiro = '5521966138194'; 
+
+        document.getElementById('form-reserva').style.display = 'none';
+        document.getElementById('confirmacao-pix').style.display = 'block';
+
+        const mensagemWhats = 
+            `Olá, Neguin! Meu nome é ${nome} e meu contato é ${telefone}. Acabei de efetuar o Pix de reserva de R$15,00 e estou enviando o comprovante anexo. Aguardo a confirmação final do meu horário. Obrigado!`;
+        
+        const link = `https://wa.me/${whatsappBarbeiro}?text=${encodeURIComponent(mensagemWhats)}`;
+        document.getElementById('link-whatsapp').href = link;
+    });
+</script>
 
 </body>
 </html>
