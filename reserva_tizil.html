@@ -3,130 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sua Experiência Exclusiva - Neguin du Corte</title>
+    <title>Reserva com Tizil | Barbearia Premium</title>
     <style>
-        /* Estilos Base - Mantidos do anterior */
+        /* ESTILOS (Mesmos da página do Neguin) */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #121212;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
         }
         .container {
-            max-width: 450px;
+            max-width: 420px;
             width: 90%;
-            background-color: #1c1c1c; 
-            color: #e0e0e0;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            background-color: #1e1e1e;
+            color: #f0f0f0;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
             text-align: center;
+            border-top: 5px solid #d4a75e;
         }
         h2 {
-            color: #d4a75e; 
-            margin-bottom: 5px;
-            font-weight: 300;
+            color: #d4a75e;
+            margin-bottom: 2px;
+            font-size: 1.5em;
+            letter-spacing: 1px;
         }
         h3 {
-            color: #fff;
+            color: #ffffff;
             margin-top: 5px;
+            font-size: 1.2em;
+        }
+        p {
+            color: #b0b0b0;
+            font-size: 0.9em;
         }
         input[type="text"], input[type="tel"] {
             width: 100%;
             padding: 12px;
             margin: 10px 0;
-            border: 1px solid #444;
+            border: none;
             border-radius: 5px;
-            background-color: #2c2c2c;
-            color: #fff;
+            background-color: #333333;
+            color: #ffffff;
             box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus, input[type="tel"]:focus {
+            outline: none;
+            border-bottom: 2px solid #d4a75e;
         }
         label {
             display: block;
             text-align: left;
             margin-top: 15px;
-            color: #aaa;
+            color: #d4a75e;
+            font-weight: 500;
         }
         button {
             background-color: #d4a75e; 
             color: #1c1c1c;
-            padding: 12px 25px;
+            padding: 14px 25px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
             font-weight: bold;
-            margin-top: 20px;
+            margin-top: 25px;
             transition: background-color 0.3s;
+            width: 100%;
         }
         button:hover {
             background-color: #bfa05d;
         }
         #confirmacao-pix {
-            margin-top: 20px;
+            margin-top: 30px;
             padding: 20px;
-            background-color: #252525;
-            border: 1px solid #d4a75e;
+            background-color: #2a2a2a;
             border-radius: 8px;
             text-align: left;
+            border: 1px dashed #444;
         }
-        .chave-pix {
+        .pix-container {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .pix-container img {
+            width: 150px;
+            height: 150px;
+            border: 4px solid #fff;
+            border-radius: 4px;
+        }
+        .copia-cola-btn {
+            background-color: #0080ff;
+            color: white;
+            padding: 10px 15px;
+            margin-top: 10px;
             font-weight: bold;
-            color: #d4a75e;
-            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
             display: block;
-            margin: 10px 0;
-            word-break: break-all;
+            width: 100%;
+            text-align: center;
+        }
+        .copia-cola-btn:hover {
+            background-color: #0066cc;
         }
         .aviso-legal {
-            font-size: 0.75em;
-            color: #888;
+            font-size: 0.7em;
+            color: #777;
             margin-top: 15px;
-            line-height: 1.4;
+            line-height: 1.5;
             text-align: center;
         }
         .whatsapp-button {
-            background-color: #25D366;
+            background-color: #25D366; 
             color: white;
             margin-top: 15px;
             width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 17px;
         }
-        .whatsapp-button:hover {
-            background-color: #1eac54;
-        }
-
-        /* NOVOS ESTILOS */
-        .logo {
-            margin-bottom: 20px;
+        .whatsapp-icon {
+            margin-right: 8px;
+            font-size: 20px;
         }
         .logo img {
-            max-width: 200px; /* Ajuste o tamanho da logo */
+            max-width: 180px;
             height: auto;
-            border-radius: 50%; /* Opcional: para dar um toque mais arredondado */
+            border-radius: 50%;
             border: 3px solid #d4a75e;
+            margin-bottom: 15px;
         }
         .indicacao-box {
-            background-color: #2c2c2c;
+            background-color: #2a2a2a;
             padding: 15px;
             border-radius: 8px;
             margin-top: 25px;
             border-left: 5px solid #d4a75e;
             text-align: left;
-        }
-        .indicacao-box h4 {
-            color: #d4a75e;
-            margin-top: 0;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        .indicacao-box p {
-            font-size: 0.9em;
-            color: #aaa;
-            margin-bottom: 10px;
         }
         .whatsapp-link {
             display: inline-flex;
@@ -134,10 +156,45 @@
             color: #25D366;
             text-decoration: none;
             font-weight: bold;
+            margin-top: 5px;
         }
-        .whatsapp-link img {
-            width: 20px;
+        .whatsapp-link .whatsapp-icon {
             margin-right: 5px;
+            color: #25D366;
+        }
+
+        /* ESTILOS FLUTUANTES */
+        #floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        #floating-whatsapp img, #floating-assistant img {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+        #floating-assistant {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            cursor: pointer;
+        }
+        #assistant-popup {
+            position: fixed;
+            bottom: 80px;
+            left: 20px;
+            background-color: #d4a75e;
+            color: #1c1c1c;
+            padding: 10px;
+            border-radius: 8px;
+            max-width: 200px;
+            font-size: 0.9em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            display: none;
         }
     </style>
 </head>
@@ -146,80 +203,126 @@
 <div class="container">
     
     <div class="logo">
-        <img src="https://i.imgur.com/8QWvM7m.png" alt="Logo Neguin du Corte Barbearia">
+        <img src="logo-corte.png" alt="Logo Barbearia">
     </div>
 
-    <h2>Agendamento Premium</h2>
-    <h3>Reserve Sua Experiência</h3>
-    <p>Seu momento de corte exclusivo começa aqui. Garanta seu horário com o depósito de reserva.</p>
+    <h2>RESERVA EXCLUSIVA COM TIZIL</h2>
+    <h3>Barbeiro Tizil</h3>
+    <p>Preencha o formulário para prosseguir com a reserva de horário com o Tizil.</p>
 
     <form id="form-reserva">
-        <label for="nome">Nome Completo:</label>
+        <label for="nome">Seu Nome:</label>
         <input type="text" id="nome" name="nome" required>
         
-        <label for="telefone">Telefone (WhatsApp com DDD):</label>
+        <label for="telefone">Seu WhatsApp (para contato):</label>
         <input type="tel" id="telefone" name="telefone" required pattern="[0-9]{10,11}" placeholder="Ex: 21987654321">
         
-        <button type="submit">Prosseguir para Confirmação e Pix</button>
+        <button type="submit">PROSSEGUIR E GARANTIR HORÁRIO</button>
     </form>
 
     <div id="confirmacao-pix" style="display:none;">
-        <h3>Passo 2: Confirmação Imediata da Reserva</h3>
+        <h3>PASSO FINAL: Confirme seu VIP Access</h3>
         
-        <p>1. Efetue seu Pix de reserva (10% do valor do corte) para a chave:</p>
-        <span class="chave-pix">Chave Pix (Telefone): **21979934676**</span>
+        <p>1. Pague a **reserva de R$ 15,00** usando o QR Code ou o Pix Copia e Cola abaixo:</p>
+        <p style="font-size: 0.85em; color: #d4a75e;">
+            *R$ 5,00 é taxa de reserva e R$ 10,00 será descontado no pagamento final do seu corte.*
+        </p>
         
-        <p style="margin-top: 20px;">2. Envie **o comprovante** via WhatsApp. Este é o único passo que garante a notificação imediata para o barbeiro e a confirmação do seu horário.</p>
+        <div class="pix-container">
+            <img src="qrcode-pix-reserva.png" alt="QR Code Pix Reserva R$ 15,00">
+            <p style="font-size: 0.9em; color: #b0b0b0; margin-top: 5px;">Valor Fixo: **R$ 15,00**</p>
+        </div>
+        
+        <button id="copiar-pix-btn" class="copia-cola-btn">PIX COPIA E COLA</button>
+        
+        <p style="margin-top: 20px; color: #fff;">2. **Notificação Imediata:** Clique no botão abaixo para nos enviar o comprovante.</p>
 
         <a id="link-whatsapp" href="#" target="_blank">
-            <button class="whatsapp-button">ENVIAR COMPROVANTE VIA WHATSAPP (Notificação Imediata)</button>
+            <button class="whatsapp-button">
+                <span class="whatsapp-icon">📱</span> ENVIAR COMPROVANTE VIA WHATSAPP (TIZIL)
+            </button>
         </a>
         
-        <p style="margin-top: 15px; font-size: 0.9em; color: #d4a75e;">Sua reserva será validada e confirmada em instantes pelo nosso atendimento após o envio do comprovante.</p>
-
         <p class="aviso-legal">
-            **Aviso de Cancelamento:** O valor de reserva (depósito) garante a exclusividade do seu horário. Em caso de não comparecimento ou cancelamento com menos de 3 horas de antecedência, o valor depositado não será reembolsado.
+            **Aviso de Cancelamento:** O valor de reserva garante a exclusividade do seu horário. Em caso de não comparecimento ou cancelamento com menos de 3 horas, o valor depositado não será reembolsado.
         </p>
+        
+        <textarea id="pix-code-payload" style="display:none;">
+00020126580014BR.GOV.BCB.PIX01368b362a40-2c30-4453-921c-d318db201168520400005303986540515.005802BR5924Carlos Henrique da Costa6009SAO PAULO621405107aZzlKfrWL63041C92
+        </textarea>
     </div>
     
     <div class="indicacao-box">
-        <h4>🚕 Precisa de um Motorista Uber?</h4>
-        <p>Garantimos sua chegada com segurança e pontualidade. Temos uma indicação de confiança na região, sempre disponível para nossos clientes exclusivos. Fale direto com o motorista:</p>
+        <h4>🚖 Motorista Particular: Niran</h4>
+        <p>Chegue com pontualidade e segurança. Recomendamos um motorista de confiança na região, dedicado aos nossos clientes:</p>
         <a href="https://wa.me/5521994475860" target="_blank" class="whatsapp-link">
-            🟢 **WhatsApp Motorista: +55 21 99447-5860**
+            <span class="whatsapp-icon">📞</span> +55 21 99447-5860
         </a>
     </div>
 
     <div class="indicacao-box">
-        <h4>🍻 Precisando de uma Gelada?</h4>
-        <p>Para o seu conforto, indicamos o depósito de bebidas parceiro que realiza delivery rápido e seguro na região. Confiança garantida pelo Neguin du Corte. Peça agora:</p>
-        <a href="https://wa.me/SEU_NUMERO_DO_DEPOSITO_AQUI" target="_blank" class="whatsapp-link">
-            🟢 **WhatsApp Delivery: [NÚMERO DO DEPÓSITO]**
+        <h4>🍻 Delivery de Bebidas: KOJAK</h4>
+        <p>Para sua conveniência: nosso depósito parceiro oferece delivery rápido e seguro na região. Confiança garantida.</p>
+        <a href="https://wa.me/5521979934676" target="_blank" class="whatsapp-link">
+            <span class="whatsapp-icon">📞</span> +55 21 97993-4676
         </a>
-        <p style="font-size: 0.7em; color: #777; margin-top: 5px;">(Substitua [NÚMERO DO DEPÓSITO] pelo contato real.)</p>
     </div>
 
 </div>
 
+<div id="assistant-popup">
+    Olá! Se tiver dúvidas sobre a reserva com Tizil, clique no ícone do WhatsApp ao lado!
+</div>
+
+<div id="floating-assistant" onclick="toggleAssistantPopup()">
+    <img src="logo-corte.png" alt="Assistente IA">
+</div>
+
+<a id="floating-whatsapp" href="https://wa.me/5521979217625?text=Olá, Tizil! Tenho dúvidas sobre o agendamento no site." target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Dúvidas">
+</a>
+
+
 <script>
+    function toggleAssistantPopup() {
+        const popup = document.getElementById('assistant-popup');
+        if (popup.style.display === 'block') {
+            popup.style.display = 'none';
+        } else {
+            popup.style.display = 'block';
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 5000); 
+        }
+    }
+
+    document.getElementById('copiar-pix-btn').addEventListener('click', function() {
+        const pixCode = document.getElementById('pix-code-payload');
+        pixCode.select();
+        document.execCommand('copy');
+        this.textContent = 'CÓDIGO COPIADO! ✅';
+        this.style.backgroundColor = '#25D366';
+        setTimeout(() => {
+            this.textContent = 'PIX COPIA E COLA';
+            this.style.backgroundColor = '#0080ff';
+        }, 3000);
+    });
+
+    // TIZIL: 5521979217625
     document.getElementById('form-reserva').addEventListener('submit', function(event) {
         event.preventDefault();
-
         const nome = document.getElementById('nome').value;
         const telefone = document.getElementById('telefone').value;
+        const whatsappBarbeiro = '5521979217625'; 
 
-        // Esconde formulário e mostra o Pix
         document.getElementById('form-reserva').style.display = 'none';
         document.getElementById('confirmacao-pix').style.display = 'block';
 
-        // Cria a mensagem pré-preenchida para o WhatsApp de confirmação de reserva
-        const mensagemWhats = `Olá! Meu nome é ${nome} e telefone ${telefone}. Acabei de efetuar o Pix de reserva e estou enviando o comprovante para confirmar meu horário.`;
+        const mensagemWhats = 
+            `Olá, Tizil! Meu nome é ${nome} e meu contato é ${telefone}. Acabei de efetuar o Pix de reserva de R$15,00 e estou enviando o comprovante anexo. Aguardo a confirmação final do meu horário. Obrigado!`;
         
-        // Link para o WhatsApp (número 21979934676 - Seu número)
-        const link = `https://wa.me/5521979934676?text=${encodeURIComponent(mensagemWhats)}`;
-        
+        const link = `https://wa.me/${whatsappBarbeiro}?text=${encodeURIComponent(mensagemWhats)}`;
         document.getElementById('link-whatsapp').href = link;
-        
     });
 </script>
 
