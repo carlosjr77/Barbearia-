@@ -159,9 +159,12 @@
             font-weight: bold;
             margin-top: 5px;
         }
+        .whatsapp-link .whatsapp-icon {
+            margin-right: 5px;
+            color: #25D366;
+        }
 
-        /* NOVOS ESTILOS FLUTUANTES */
-        /* Estilo para o botão flutuante do WhatsApp */
+        /* ESTILOS FLUTUANTES (Mantidos) */
         #floating-whatsapp {
             position: fixed;
             bottom: 20px;
@@ -173,13 +176,11 @@
             transform: scale(1.1);
         }
         #floating-whatsapp img {
-            width: 55px; /* Tamanho do ícone */
+            width: 55px;
             height: 55px;
             border-radius: 50%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
         }
-
-        /* Estilo para o assistente flutuante */
         #floating-assistant {
             position: fixed;
             bottom: 20px;
@@ -195,12 +196,10 @@
             width: 55px;
             height: 55px;
             border-radius: 50%;
-            border: 3px solid #d4a75e; /* Destaque */
+            border: 3px solid #d4a75e;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
             background-color: #1e1e1e;
         }
-
-        /* Estilo para o pop-up do assistente */
         #assistant-popup {
             position: fixed;
             bottom: 80px;
@@ -212,7 +211,7 @@
             max-width: 200px;
             font-size: 0.9em;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-            display: none; /* Escondido por padrão */
+            display: none;
         }
     </style>
 </head>
@@ -221,7 +220,7 @@
 <div class="container">
     
     <div class="logo">
-        <img src="logo-barbearia.jpg" alt="Logo Neguin du Corte Barbearia">
+        <img src="logo-neguin-du-corte.JPG" alt="Logo Neguin du Corte Barbearia">
     </div>
 
     <h2>SUA RESERVA EXCLUSIVA</h2>
@@ -299,15 +298,13 @@ COLOQUE O CODIGO PIX COPIA E COLA AQUI
 
 
 <script>
-    // SCRIPT PARA O POP-UP DO ASSISTENTE
+    // SCRIPT PARA O POP-UP DO ASSISTENTE (Mantido)
     function toggleAssistantPopup() {
         const popup = document.getElementById('assistant-popup');
-        // Alterna a exibição do pop-up
         if (popup.style.display === 'block') {
             popup.style.display = 'none';
         } else {
             popup.style.display = 'block';
-            // Esconde automaticamente após 5 segundos
             setTimeout(() => {
                 popup.style.display = 'none';
             }, 5000); 
