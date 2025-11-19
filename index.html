@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reserva Exclusiva | Neguin du Corte</title>
     <style>
-        /* Estilos de Aparência Profissional - Mantidos */
+        /* ESTILOS BASE E CONTAINER - Mantidos */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -27,6 +27,7 @@
             text-align: center;
             border-top: 5px solid #d4a75e;
         }
+        /* ... outros estilos de h2, h3, p, input, etc. (Mantidos) ... */
         h2 {
             color: #d4a75e;
             margin-bottom: 2px;
@@ -88,8 +89,6 @@
             text-align: left;
             border: 1px dashed #444;
         }
-        
-        /* NOVO ESTILO DO QR CODE */
         .pix-container {
             text-align: center;
             margin-bottom: 15px;
@@ -101,7 +100,7 @@
             border-radius: 4px;
         }
         .copia-cola-btn {
-            background-color: #0080ff; /* Azul para Pix Copia e Cola */
+            background-color: #0080ff;
             color: white;
             padding: 10px 15px;
             margin-top: 10px;
@@ -116,7 +115,6 @@
         .copia-cola-btn:hover {
             background-color: #0066cc;
         }
-
         .aviso-legal {
             font-size: 0.7em;
             color: #777;
@@ -138,8 +136,6 @@
             margin-right: 8px;
             font-size: 20px;
         }
-
-        /* ESTILOS DE INDICAÇÃO (Mantidos) */
         .logo img {
             max-width: 180px;
             height: auto;
@@ -163,9 +159,60 @@
             font-weight: bold;
             margin-top: 5px;
         }
-        .whatsapp-link .whatsapp-icon {
-            margin-right: 5px;
-            color: #25D366;
+
+        /* NOVOS ESTILOS FLUTUANTES */
+        /* Estilo para o botão flutuante do WhatsApp */
+        #floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            transition: transform 0.3s;
+        }
+        #floating-whatsapp:hover {
+            transform: scale(1.1);
+        }
+        #floating-whatsapp img {
+            width: 55px; /* Tamanho do ícone */
+            height: 55px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Estilo para o assistente flutuante */
+        #floating-assistant {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        #floating-assistant:hover {
+            transform: scale(1.1);
+        }
+        #floating-assistant img {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            border: 3px solid #d4a75e; /* Destaque */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            background-color: #1e1e1e;
+        }
+
+        /* Estilo para o pop-up do assistente */
+        #assistant-popup {
+            position: fixed;
+            bottom: 80px;
+            left: 20px;
+            background-color: #d4a75e;
+            color: #1c1c1c;
+            padding: 10px;
+            border-radius: 8px;
+            max-width: 200px;
+            font-size: 0.9em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            display: none; /* Escondido por padrão */
         }
     </style>
 </head>
@@ -174,7 +221,7 @@
 <div class="container">
     
     <div class="logo">
-        <img src="logo-neguin-du-corte.png" alt="Logo Neguin du Corte Barbearia">
+        <img src="logo-barbearia.jpg" alt="Logo Neguin du Corte Barbearia">
     </div>
 
     <h2>SUA RESERVA EXCLUSIVA</h2>
@@ -221,7 +268,7 @@ COLOQUE O CODIGO PIX COPIA E COLA AQUI
     </div>
     
     <div class="indicacao-box">
-        <h4>🚖 Indicação de Transporte (Uber)</h4>
+        <h4>🚖 Motorista Particular: Niran</h4>
         <p>Chegue com pontualidade e segurança. Recomendamos um motorista de confiança na região, dedicado aos nossos clientes:</p>
         <a href="https://wa.me/5521994475860" target="_blank" class="whatsapp-link">
             <span class="whatsapp-icon">📞</span> +55 21 99447-5860
@@ -229,34 +276,57 @@ COLOQUE O CODIGO PIX COPIA E COLA AQUI
     </div>
 
     <div class="indicacao-box">
-        <h4>🍻 Delivery de Bebidas Parceiro</h4>
-        <p>Para sua conveniência: nosso depósito parceiro oferece delivery rápido e seguro na região. Confiança garantida pelo Neguin du Corte:</p>
-        <a href="https://wa.me/SEU_NUMERO_DO_DEPOSITO_AQUI" target="_blank" class="whatsapp-link">
-            <span class="whatsapp-icon">📞</span> [NÚMERO DO DEPÓSITO]
+        <h4>🍻 Delivery de Bebidas: KOJAK</h4>
+        <p>Para sua conveniência: nosso depósito parceiro oferece delivery rápido e seguro na região. Confiança garantida pelo Neguin du Corte. Chame o KOJAK:</p>
+        <a href="https://wa.me/5521979934676" target="_blank" class="whatsapp-link">
+            <span class="whatsapp-icon">📞</span> +55 21 97993-4676
         </a>
-        <p style="font-size: 0.7em; color: #777; margin-top: 5px;">(Substitua [NÚMERO DO DEPÓSITO] pelo contato real.)</p>
     </div>
 
 </div>
 
+<div id="assistant-popup">
+    Olá! Sou seu assistente virtual. Se tiver dúvidas, clique no ícone do WhatsApp ao lado! Estamos prontos para te atender.
+</div>
+
+<div id="floating-assistant" onclick="toggleAssistantPopup()">
+    <img src="https://i.imgur.com/2Y4I1rJ.png" alt="Assistente IA">
+</div>
+
+<a id="floating-whatsapp" href="https://wa.me/5521966138194?text=Olá, Neguin du Corte! Estou navegando no seu site e gostaria de tirar uma dúvida rápida sobre o agendamento/serviços." target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Dúvidas">
+</a>
+
+
 <script>
-    // NOVO SCRIP PARA COPIAR O CÓDIGO PIX
+    // SCRIPT PARA O POP-UP DO ASSISTENTE
+    function toggleAssistantPopup() {
+        const popup = document.getElementById('assistant-popup');
+        // Alterna a exibição do pop-up
+        if (popup.style.display === 'block') {
+            popup.style.display = 'none';
+        } else {
+            popup.style.display = 'block';
+            // Esconde automaticamente após 5 segundos
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 5000); 
+        }
+    }
+
+
+    // SCRIPT PARA COPIAR O CÓDIGO PIX (Mantido)
     document.getElementById('copiar-pix-btn').addEventListener('click', function() {
         const pixCode = document.getElementById('pix-code-payload');
         
-        // Seleciona o texto dentro do textarea
         pixCode.select();
-        // Para dispositivos móveis
         pixCode.setSelectionRange(0, 99999); 
         
-        // Copia o texto para a área de transferência
         document.execCommand('copy');
         
-        // Feedback visual para o usuário
         this.textContent = 'CÓDIGO COPIADO! ✅';
-        this.style.backgroundColor = '#25D366'; // Mudar cor para verde
+        this.style.backgroundColor = '#25D366';
         
-        // Retorna o texto original após 3 segundos
         setTimeout(() => {
             this.textContent = 'PIX COPIA E COLA';
             this.style.backgroundColor = '#0080ff';
