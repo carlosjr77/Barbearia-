@@ -3,130 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sua Experiência Exclusiva - Neguin du Corte</title>
+    <title>Reserva Exclusiva | Neguin du Corte</title>
     <style>
-        /* Estilos Base - Mantidos do anterior */
+        /* Estilos de Aparência Profissional - Mantidos */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #121212;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
         }
         .container {
-            max-width: 450px;
+            max-width: 420px;
             width: 90%;
-            background-color: #1c1c1c; 
-            color: #e0e0e0;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            background-color: #1e1e1e;
+            color: #f0f0f0;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
             text-align: center;
+            border-top: 5px solid #d4a75e;
         }
         h2 {
-            color: #d4a75e; 
-            margin-bottom: 5px;
-            font-weight: 300;
+            color: #d4a75e;
+            margin-bottom: 2px;
+            font-size: 1.5em;
+            letter-spacing: 1px;
         }
         h3 {
-            color: #fff;
+            color: #ffffff;
             margin-top: 5px;
+            font-size: 1.2em;
+        }
+        p {
+            color: #b0b0b0;
+            font-size: 0.9em;
         }
         input[type="text"], input[type="tel"] {
             width: 100%;
             padding: 12px;
             margin: 10px 0;
-            border: 1px solid #444;
+            border: none;
             border-radius: 5px;
-            background-color: #2c2c2c;
-            color: #fff;
+            background-color: #333333;
+            color: #ffffff;
             box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus, input[type="tel"]:focus {
+            outline: none;
+            border-bottom: 2px solid #d4a75e;
         }
         label {
             display: block;
             text-align: left;
             margin-top: 15px;
-            color: #aaa;
+            color: #d4a75e;
+            font-weight: 500;
         }
         button {
             background-color: #d4a75e; 
             color: #1c1c1c;
-            padding: 12px 25px;
+            padding: 14px 25px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
             font-weight: bold;
-            margin-top: 20px;
+            margin-top: 25px;
             transition: background-color 0.3s;
+            width: 100%;
         }
         button:hover {
             background-color: #bfa05d;
         }
         #confirmacao-pix {
-            margin-top: 20px;
+            margin-top: 30px;
             padding: 20px;
-            background-color: #252525;
-            border: 1px solid #d4a75e;
+            background-color: #2a2a2a;
             border-radius: 8px;
             text-align: left;
+            border: 1px dashed #444;
         }
-        .chave-pix {
+        
+        /* NOVO ESTILO DO QR CODE */
+        .pix-container {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .pix-container img {
+            width: 150px;
+            height: 150px;
+            border: 4px solid #fff;
+            border-radius: 4px;
+        }
+        .copia-cola-btn {
+            background-color: #0080ff; /* Azul para Pix Copia e Cola */
+            color: white;
+            padding: 10px 15px;
+            margin-top: 10px;
             font-weight: bold;
-            color: #d4a75e;
-            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
             display: block;
-            margin: 10px 0;
-            word-break: break-all;
+            width: 100%;
+            text-align: center;
         }
+        .copia-cola-btn:hover {
+            background-color: #0066cc;
+        }
+
         .aviso-legal {
-            font-size: 0.75em;
-            color: #888;
+            font-size: 0.7em;
+            color: #777;
             margin-top: 15px;
-            line-height: 1.4;
+            line-height: 1.5;
             text-align: center;
         }
         .whatsapp-button {
-            background-color: #25D366;
+            background-color: #25D366; 
             color: white;
             margin-top: 15px;
             width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 17px;
         }
-        .whatsapp-button:hover {
-            background-color: #1eac54;
+        .whatsapp-icon {
+            margin-right: 8px;
+            font-size: 20px;
         }
 
-        /* ESTILOS DE INDICAÇÃO */
-        .logo {
-            margin-bottom: 20px;
-        }
+        /* ESTILOS DE INDICAÇÃO (Mantidos) */
         .logo img {
-            max-width: 200px;
+            max-width: 180px;
             height: auto;
             border-radius: 50%;
             border: 3px solid #d4a75e;
+            margin-bottom: 15px;
         }
         .indicacao-box {
-            background-color: #2c2c2c;
+            background-color: #2a2a2a;
             padding: 15px;
             border-radius: 8px;
             margin-top: 25px;
             border-left: 5px solid #d4a75e;
             text-align: left;
-        }
-        .indicacao-box h4 {
-            color: #d4a75e;
-            margin-top: 0;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        .indicacao-box p {
-            font-size: 0.9em;
-            color: #aaa;
-            margin-bottom: 10px;
         }
         .whatsapp-link {
             display: inline-flex;
@@ -134,10 +161,11 @@
             color: #25D366;
             text-decoration: none;
             font-weight: bold;
+            margin-top: 5px;
         }
-        .whatsapp-link img {
-            width: 20px;
+        .whatsapp-link .whatsapp-icon {
             margin-right: 5px;
+            color: #25D366;
         }
     </style>
 </head>
@@ -146,57 +174,65 @@
 <div class="container">
     
     <div class="logo">
-        <img src="https://i.imgur.com/8QWvM7m.png" alt="Logo Neguin du Corte Barbearia">
+        <img src="logo-neguin-du-corte.png" alt="Logo Neguin du Corte Barbearia">
     </div>
 
-    <h2>Agendamento Premium</h2>
-    <h3>Reserve Sua Experiência</h3>
-    <p>Seu momento de corte exclusivo começa aqui. Garanta seu horário com o depósito de reserva.</p>
+    <h2>SUA RESERVA EXCLUSIVA</h2>
+    <h3>Neguin du Corte</h3>
+    <p>Garanta seu atendimento VIP. O depósito de reserva confirma seu compromisso e a exclusividade do seu horário.</p>
 
     <form id="form-reserva">
-        <label for="nome">Nome Completo:</label>
+        <label for="nome">Seu Nome:</label>
         <input type="text" id="nome" name="nome" required>
         
-        <label for="telefone">Telefone (WhatsApp com DDD):</label>
+        <label for="telefone">Seu WhatsApp (para contato):</label>
         <input type="tel" id="telefone" name="telefone" required pattern="[0-9]{10,11}" placeholder="Ex: 21987654321">
         
-        <button type="submit">Prosseguir para Confirmação e Pix</button>
+        <button type="submit">PROSSEGUIR E GARANTIR HORÁRIO</button>
     </form>
 
     <div id="confirmacao-pix" style="display:none;">
-        <h3>Passo 2: Confirmação Imediata da Reserva</h3>
+        <h3>PASSO FINAL: Confirme seu VIP Access</h3>
         
-        <p>1. Efetue seu Pix de reserva (10% do valor do corte) para a chave:</p>
-        <span class="chave-pix">Chave Pix (Telefone): **21979934676**</span>
+        <p>1. Pague a reserva (10% do valor do corte) usando o QR Code ou o Pix Copia e Cola abaixo:</p>
         
-        <p style="margin-top: 20px;">2. Envie **o comprovante** via WhatsApp para o novo número. Este é o único passo que garante a notificação imediata para o barbeiro e a confirmação do seu horário.</p>
-
-        <span class="chave-pix" style="color: #25D366;">WhatsApp Confirmação: +55 21 96613-8194</span>
+        <div class="pix-container">
+            <img src="qrcode-pix-reserva.png" alt="QR Code Pix Reserva">
+            <p style="font-size: 0.8em; color: #b0b0b0; margin-top: 5px;">Valor Fixo: R$ [VALOR DA RESERVA]</p>
+        </div>
+        
+        <button id="copiar-pix-btn" class="copia-cola-btn">PIX COPIA E COLA</button>
+        
+        <p style="margin-top: 20px; color: #fff;">2. **Notificação Imediata:** Clique no botão abaixo para nos enviar o comprovante.</p>
 
         <a id="link-whatsapp" href="#" target="_blank">
-            <button class="whatsapp-button">ENVIAR COMPROVANTE VIA WHATSAPP (Notificação Imediata)</button>
+            <button class="whatsapp-button">
+                <span class="whatsapp-icon">📱</span> ENVIAR COMPROVANTE VIA WHATSAPP
+            </button>
         </a>
         
-        <p style="margin-top: 15px; font-size: 0.9em; color: #d4a75e;">Sua reserva será validada e confirmada em instantes pelo nosso atendimento após o envio do comprovante.</p>
-
         <p class="aviso-legal">
-            **Aviso de Cancelamento:** O valor de reserva (depósito) garante a exclusividade do seu horário. Em caso de não comparecimento ou cancelamento com menos de 3 horas de antecedência, o valor depositado não será reembolsado.
+            **Aviso de Cancelamento:** O valor de reserva garante a exclusividade do seu horário. Em caso de não comparecimento ou cancelamento com menos de 3 horas, o valor depositado não será reembolsado.
         </p>
+        
+        <textarea id="pix-code-payload" style="display:none;">
+COLOQUE O CODIGO PIX COPIA E COLA AQUI
+        </textarea>
     </div>
     
     <div class="indicacao-box">
-        <h4>🚕 Precisa de um Motorista Uber?</h4>
-        <p>Garantimos sua chegada com segurança e pontualidade. Temos uma indicação de confiança na região, sempre disponível para nossos clientes exclusivos. Fale direto com o motorista:</p>
+        <h4>🚖 Indicação de Transporte (Uber)</h4>
+        <p>Chegue com pontualidade e segurança. Recomendamos um motorista de confiança na região, dedicado aos nossos clientes:</p>
         <a href="https://wa.me/5521994475860" target="_blank" class="whatsapp-link">
-            🟢 **WhatsApp Motorista: +55 21 99447-5860**
+            <span class="whatsapp-icon">📞</span> +55 21 99447-5860
         </a>
     </div>
 
     <div class="indicacao-box">
-        <h4>🍻 Precisando de uma Gelada?</h4>
-        <p>Para o seu conforto, indicamos o depósito de bebidas parceiro que realiza delivery rápido e seguro na região. Confiança garantida pelo Neguin du Corte. Peça agora:</p>
+        <h4>🍻 Delivery de Bebidas Parceiro</h4>
+        <p>Para sua conveniência: nosso depósito parceiro oferece delivery rápido e seguro na região. Confiança garantida pelo Neguin du Corte:</p>
         <a href="https://wa.me/SEU_NUMERO_DO_DEPOSITO_AQUI" target="_blank" class="whatsapp-link">
-            🟢 **WhatsApp Delivery: [NÚMERO DO DEPÓSITO]**
+            <span class="whatsapp-icon">📞</span> [NÚMERO DO DEPÓSITO]
         </a>
         <p style="font-size: 0.7em; color: #777; margin-top: 5px;">(Substitua [NÚMERO DO DEPÓSITO] pelo contato real.)</p>
     </div>
@@ -204,23 +240,46 @@
 </div>
 
 <script>
+    // NOVO SCRIP PARA COPIAR O CÓDIGO PIX
+    document.getElementById('copiar-pix-btn').addEventListener('click', function() {
+        const pixCode = document.getElementById('pix-code-payload');
+        
+        // Seleciona o texto dentro do textarea
+        pixCode.select();
+        // Para dispositivos móveis
+        pixCode.setSelectionRange(0, 99999); 
+        
+        // Copia o texto para a área de transferência
+        document.execCommand('copy');
+        
+        // Feedback visual para o usuário
+        this.textContent = 'CÓDIGO COPIADO! ✅';
+        this.style.backgroundColor = '#25D366'; // Mudar cor para verde
+        
+        // Retorna o texto original após 3 segundos
+        setTimeout(() => {
+            this.textContent = 'PIX COPIA E COLA';
+            this.style.backgroundColor = '#0080ff';
+        }, 3000);
+    });
+
+    // SCRIPT DO FORMULÁRIO (Mantido)
     document.getElementById('form-reserva').addEventListener('submit', function(event) {
         event.preventDefault();
 
         const nome = document.getElementById('nome').value;
         const telefone = document.getElementById('telefone').value;
         
-        // NOVO NÚMERO DO WHATSAPP DE CONFIRMAÇÃO
         const whatsappBarbearia = '5521966138194'; 
 
-        // Esconde formulário e mostra o Pix
         document.getElementById('form-reserva').style.display = 'none';
         document.getElementById('confirmacao-pix').style.display = 'block';
 
-        // Cria a mensagem pré-preenchida para o WhatsApp de confirmação de reserva
-        const mensagemWhats = `Olá! Meu nome é ${nome} e telefone ${telefone}. Acabei de efetuar o Pix de reserva e estou enviando o comprovante para confirmar meu horário.`;
+        const mensagemWhats = 
+            `Olá, Neguin du Corte! Meu nome é ${nome} e meu contato é ${telefone}. 
+            
+            Acabei de efetuar o Pix de reserva e estou enviando o comprovante anexo. Conto com a qualidade premium do seu serviço e aguardo a confirmação final do meu horário. Obrigado!`;
         
-        // Link para o WhatsApp (AGORA USANDO O NOVO NÚMERO: 5521966138194)
         const link = `https://wa.me/${whatsappBarbearia}?text=${encodeURIComponent(mensagemWhats)}`;
         
         document.getElementById('link-whatsapp').href = link;
