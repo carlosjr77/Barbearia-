@@ -27,7 +27,6 @@
             text-align: center;
             border-top: 5px solid #d4a75e;
         }
-        /* ... outros estilos de h2, h3, p, input, etc. (Mantidos) ... */
         h2 {
             color: #d4a75e;
             margin-bottom: 2px;
@@ -220,12 +219,12 @@
 <div class="container">
     
     <div class="logo">
-        <img src="logo-neguin-du-corte.JPG" alt="Logo Neguin du Corte Barbearia">
+        <img src="logo-corte.png" alt="Logo Neguin du Corte Barbearia">
     </div>
 
     <h2>SUA RESERVA EXCLUSIVA</h2>
     <h3>Neguin du Corte</h3>
-    <p>Garanta seu atendimento VIP. O depósito de reserva confirma seu compromisso e a exclusividade do seu horário.</p>
+    <p>Garantimos a exclusividade do seu horário. Preencha o formulário para prosseguir com a reserva.</p>
 
     <form id="form-reserva">
         <label for="nome">Seu Nome:</label>
@@ -240,11 +239,14 @@
     <div id="confirmacao-pix" style="display:none;">
         <h3>PASSO FINAL: Confirme seu VIP Access</h3>
         
-        <p>1. Pague a reserva (10% do valor do corte) usando o QR Code ou o Pix Copia e Cola abaixo:</p>
+        <p>1. Pague a **reserva de R$ 15,00** usando o QR Code ou o Pix Copia e Cola abaixo:</p>
+        <p style="font-size: 0.85em; color: #d4a75e;">
+            *R$ 5,00 é taxa de reserva e R$ 10,00 será descontado no pagamento final do seu corte.*
+        </p>
         
         <div class="pix-container">
-            <img src="qrcode-pix-reserva.png" alt="QR Code Pix Reserva">
-            <p style="font-size: 0.8em; color: #b0b0b0; margin-top: 5px;">Valor Fixo: R$ [VALOR DA RESERVA]</p>
+            <img src="qrcode-pix-reserva.png" alt="QR Code Pix Reserva R$ 15,00">
+            <p style="font-size: 0.9em; color: #b0b0b0; margin-top: 5px;">Valor Fixo: **R$ 15,00**</p>
         </div>
         
         <button id="copiar-pix-btn" class="copia-cola-btn">PIX COPIA E COLA</button>
@@ -262,7 +264,7 @@
         </p>
         
         <textarea id="pix-code-payload" style="display:none;">
-COLOQUE O CODIGO PIX COPIA E COLA AQUI
+00020126580014BR.GOV.BCB.PIX01368b362a40-2c30-4453-921c-d318db201168520400005303986540515.005802BR5924Carlos Henrique da Costa6009SAO PAULO621405107aZzlKfrWL63041C92
         </textarea>
     </div>
     
@@ -345,7 +347,7 @@ COLOQUE O CODIGO PIX COPIA E COLA AQUI
         const mensagemWhats = 
             `Olá, Neguin du Corte! Meu nome é ${nome} e meu contato é ${telefone}. 
             
-            Acabei de efetuar o Pix de reserva e estou enviando o comprovante anexo. Conto com a qualidade premium do seu serviço e aguardo a confirmação final do meu horário. Obrigado!`;
+            Acabei de efetuar o Pix de reserva de R$15,00 e estou enviando o comprovante anexo. Conto com a qualidade premium do seu serviço e aguardo a confirmação final do meu horário. Obrigado!`;
         
         const link = `https://wa.me/${whatsappBarbearia}?text=${encodeURIComponent(mensagemWhats)}`;
         
